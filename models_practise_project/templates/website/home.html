@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class='w-full grid grid-cols-3 gap-5'>
+    {% for product in all_products %}
+                <div class='p-3 bg-gray-700 rounded-xl'>
+                    <div class='flex flex-col justify-around items-left'>
+                        <h1>Name: {{product.product_name}}</h1>
+                        <h3>Category: {{product.product_category}}</h3>
+                        <p>Price: {{product.product_price}}</p>
+                    </div>
+                    <a href="{% url 'specific_product' product.id %}"class='text-orange-400'>Learn more</a>
+                </div>
+            {% endfor %}
+        </div>
+{% endblock %}

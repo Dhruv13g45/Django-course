@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <h1>Name: {{single_product.product_name}}</h1>
+    <h3>Category: {{single_product.product_category}}</h3>
+    <p>Price: {{single_product.product_price}}</p>
+    <p>Descirption: {{single_product.product_description}}</p>
+    <a href="/" class='  text-orange-400 font-bold'>Back</a>
+{% endblock %}

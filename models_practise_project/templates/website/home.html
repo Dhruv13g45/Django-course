@@ -1,16 +1,17 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<h1 class='text-center font-bold text-[2rem]'>All Products Page</h1>    
 <div class='w-full grid grid-cols-3 gap-5'>
-    {% for product in all_products %}
-                <div class='p-3 bg-gray-700 rounded-xl'>
-                    <div class='flex flex-col justify-around items-left'>
-                        <h1>Name: {{product.product_name}}</h1>
+{% for product in all_products %}
+                <div class='p-5 bg-gray-700 rounded-xl font-semibold'>
+                    <div class='flex flex-col mb-4 justify-around items-left'>
+                        <h1>Name: <span class='underline underline-offset-4'>{{product.product_name}}</span></h1>
                         <h3>Category: {{product.product_category}}</h3>
                         <p>Price: {{product.product_price}}</p>
                     </div>
-                    <a href="{% url 'specific_product' product.id %}"class='text-orange-400'>Learn more</a>
+                    <a href="{% url 'specific_product' product.id %}"class=' text-white p-3 rounded-lg w-full bg-orange-500 '>Learn more</a>
                 </div>
             {% endfor %}
-        </div>
+            </div>
 {% endblock %}

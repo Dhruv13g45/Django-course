@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class='grid grid-cols-3 gap-4'>
+    {% for prod in all_prods %}
+    <div class='bg-blue-600 text-white w-full rounded-xl p-3 text-bold text-2xl'>
+        <div class='w-full p-5'>
+            <img src="{{prod.product_image.url}}" alt="image" class='rounded-xl w-full'>
+        </div>
+        <div class='flex justify-between items-center mb-4'>
+            <h1>Name: <span>{{prod.product_name}}</span></h1>
+            <h1>Price: Rs.<span>{{prod.product_price}}</span></h1>
+        </div>
+        <a href=" {% url 'singleProduct' prod.id %} " class='bg-blue-400 rounded-lg p-3 w-full m-4'>View Details</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

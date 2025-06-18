@@ -1,0 +1,71 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnUni Management Software</title>
+  {% tailwind_css %}
+</head>
+<body class="flex min-h-screen bg-gray-100">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-slate-950 text-white flex flex-col p-4 space-y-6 fixed h-full">
+    <div class="text-2xl font-bold flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0112 20.5a12.083 12.083 0 01-6.16-9.922L12 14z" />
+      </svg>
+      <span>OnUni Manager</span>
+    </div>
+
+    <nav class="flex flex-col space-y-4">
+      <a href='/' class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+        <span>🏠</span> Dashboard
+      </a>
+      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+        <span>📚</span> Courses
+      </a>
+      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+        <span>👥</span> Students
+      </a>
+      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+        <span>📢</span> Notice
+      </a>
+      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+        <span>💳</span> Payment
+      </a>
+      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+        <span>📖</span> LMS
+      </a>
+      <a href="/" class="flex items-center gap-2 bg-slate-800 p-2 rounded">
+        <span>🔏</span> Login
+      </a>
+      <a href="/" class="flex items-center gap-2 bg-slate-800 p-2 rounded">
+        <span>📝</span> Register
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 ml-64 p-6 md:ml-64">
+    <h1 class="text-3xl font-semibold text-gray-700">Welcome to 'College name'</h1>
+    
+    <div class='grid grid-cols-2 gap-4 mt-4'>
+        <div class='border-none rounded-xl bg-slate-200 flex flex-col justify-center items-center p-4 shadow-xl'>
+            <h1 class='text-3xl font-semibold text-gray-800'>Total Job Offers</h1>
+            <h2 class='text-4xl text-gray-900 font-bold'>100+</h2>
+        </div>
+        <div class='border-none rounded-xl bg-slate-200 flex flex-col justify-center items-center p-4 shadow-xl'>
+            <h1 class='text-3xl font-semibold text-gray-800'>Total Students</h1>
+            <h2 class='text-4xl text-gray-900 font-bold'>200+</h2>
+        </div>
+        <div class='border-none rounded-xl bg-slate-200 flex flex-col justify-center items-center p-4 shadow-xl'>
+            <h1 class='text-3xl font-semibold text-gray-800'>Total Courses</h1>
+            <h2 class='text-4xl text-gray-900 font-bold'>10+</h2>
+        </div>
+    </div>
+  </main>
+
+</body>
+</html>

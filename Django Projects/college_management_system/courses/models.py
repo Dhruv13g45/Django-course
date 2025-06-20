@@ -13,7 +13,7 @@ class Course(models.Model):
         ('DS','Data Science'),
     ]
 
-    course_name = models.CharField(choices=course_choice)
+    course_name = models.CharField(max_length = 100 ,choices=course_choice)
     course_start_date = models.DateTimeField(default=timezone.now)
     course_end_date = models.DateTimeField(default=timezone.now)
     course_fees = models.DecimalField(max_digits=10, decimal_places=2)

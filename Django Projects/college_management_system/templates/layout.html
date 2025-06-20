@@ -20,52 +20,35 @@
     </div>
 
     <nav class="flex flex-col space-y-4">
-      <a href='/' class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+      <a href='profile/' class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
         <span>🏠</span> Dashboard
       </a>
-      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+      <a href='courses/' class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
         <span>📚</span> Courses
       </a>
-      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+      <a href="all_students/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
         <span>👥</span> Students
       </a>
-      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+      <a href="notices/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
         <span>📢</span> Notice
       </a>
-      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+      <a href="fee_payment/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
         <span>💳</span> Payment
       </a>
-      <a href="/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
-        <span>📖</span> LMS
+      <a href="library/" class="flex items-center gap-2 hover:bg-slate-800 p-2 rounded">
+        <span>📖</span> Library
       </a>
-      <a href="/" class="flex items-center gap-2 bg-slate-800 p-2 rounded">
+      <a href="login/" class="flex items-center gap-2 bg-slate-800 p-2 rounded">
         <span>🔏</span> Login
       </a>
-      <a href="/" class="flex items-center gap-2 bg-slate-800 p-2 rounded">
+      <a href="register/" class="flex items-center gap-2 bg-slate-800 p-2 rounded">
         <span>📝</span> Register
       </a>
     </nav>
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 ml-64 p-6 md:ml-64">
-    <h1 class="text-3xl font-semibold text-gray-700">Welcome to 'College name'</h1>
-    
-    <div class='grid grid-cols-2 gap-4 mt-4'>
-        <div class='border-none rounded-xl bg-slate-200 flex flex-col justify-center items-center p-4 shadow-xl'>
-            <h1 class='text-3xl font-semibold text-gray-800'>Total Job Offers</h1>
-            <h2 class='text-4xl text-gray-900 font-bold'>100+</h2>
-        </div>
-        <div class='border-none rounded-xl bg-slate-200 flex flex-col justify-center items-center p-4 shadow-xl'>
-            <h1 class='text-3xl font-semibold text-gray-800'>Total Students</h1>
-            <h2 class='text-4xl text-gray-900 font-bold'>200+</h2>
-        </div>
-        <div class='border-none rounded-xl bg-slate-200 flex flex-col justify-center items-center p-4 shadow-xl'>
-            <h1 class='text-3xl font-semibold text-gray-800'>Total Courses</h1>
-            <h2 class='text-4xl text-gray-900 font-bold'>10+</h2>
-        </div>
-    </div>
-  </main>
-
+  {% block content %}
+  {% endblock %}
 </body>
 </html>

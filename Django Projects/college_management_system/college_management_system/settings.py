@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tailwind',
     'users',
     'authentication',
     'library',
@@ -47,7 +46,9 @@ INSTALLED_APPS = [
     'chat',
     'academics',
     'theme',
+    'courses',
     'notice',
+    'tailwind',
     'django_browser_reload',
 ]
 TAILWIND_APP_NAME = 'theme' # This is the name of the app that will be used to generate the tailwind files

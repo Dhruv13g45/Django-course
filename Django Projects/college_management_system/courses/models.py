@@ -1,3 +1,4 @@
+from uuid import uuid4
 from django.utils import timezone
 from django.db import models
 
@@ -12,7 +13,7 @@ class Course(models.Model):
         ('AI/ML','Artifical Intelligence and Machine Learning'),
         ('DS','Data Science'),
     ]
-
+    course_id = models.UUIDField(default=uuid4, primary_key=True)
     course_name = models.CharField(max_length = 100 ,choices=course_choice)
     course_start_date = models.DateTimeField(default=timezone.now)
     course_end_date = models.DateTimeField(default=timezone.now)
